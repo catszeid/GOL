@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!-- Author: Keith Maitland -->
+<html lang="en">
+<head>
+	<title>Game of Life</title>
+	<meta charset="utf-8" />
+	<script src="gol.js"></script>
+	<link rel="stylesheet" href="gol.css" />
+</head>
+<body>
+	<header>
+		<h1 id="title">Game of Life</h1>
+		<p>A 2-D cell simulation</p>
+	</header>
+	<div id="canvasContainer">
+		<canvas id="canvas" width="600px" height="600px">Canvas not supported</canvas>
+	</div>
+	<div id="optionsContainer" class="center">
+		<div>
+			<input type="button" id="start" value="Start" >
+			<input type="button" id="stop" value="Stop" >
+			<input type="button" id="step" value="Step" >
+		</div>
+		<input type="button" id="new" value="New Game">
+		<div class="box">
+			<p id="generation"></p>
+			Clicked Cell:
+			<p id="cell"></p>
+		</div>
+		
+		<h1 class="box">Options</h1>
+		<form id="update">
+			<h3>Update Speed</h3>
+			<input type="radio" name="updateSpeed" id="2sec" value="2000"> 2 sec
+			<input type="radio" name="updateSpeed" id="1sec" value="1000" checked> 1 sec
+			<input type="radio" name="updateSpeed" id="05sec" value="500"> 1/2 sec
+		</form>
+		<form id="cells">
+			<h3>Number of Cells</h3>
+			<input type="radio" name="numCells" id="10cells" value="10"> 100
+			<input type="radio" name="numCells" id="100cells" value="100" checked> 10000
+			<input type="radio" name="numCells" id="600cells" value="600" > 360000
+		</form>
+	</div>
+</body>
+</html>
